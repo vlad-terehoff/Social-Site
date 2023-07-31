@@ -15,5 +15,11 @@
        <p>Вы можете <a href="{% url 'edit' %}">изменить ваш профиль</a> или <a href="{% url 'password_change' %}">
             изменить ваш пароль</a>
     </p>
+    <h2>Последние события</h2>
+    <div id="action_list">
+        {% for action in actions %}
+            {% include "actions/action/detail.html" %}
+        {% endfor %}
+    </div>
 
 {% endblock %}
